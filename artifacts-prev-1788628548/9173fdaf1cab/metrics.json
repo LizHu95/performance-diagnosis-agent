@@ -1,0 +1,308 @@
+{
+  "taskId": "9173fdaf1cab",
+  "taskPath": "/Users/bytedance/Documents/privacy/code/performance-diagnosis/tasks/sample-chat-switch.md",
+  "url": "https://example.com/chat",
+  "scenario": "switch-session",
+  "confidence": 0.86,
+  "status": "SUCCESS",
+  "metrics": [
+    {
+      "id": "metric-1eb4afc388",
+      "name": "INP",
+      "category": "interaction",
+      "value": 264,
+      "unit": "ms",
+      "runId": "run-01"
+    },
+    {
+      "id": "metric-e54ba4d4a1",
+      "name": "Long Task",
+      "category": "interaction",
+      "value": 486,
+      "unit": "ms",
+      "runId": "run-01"
+    },
+    {
+      "id": "metric-cfd832b395",
+      "name": "INP",
+      "category": "interaction",
+      "value": 264,
+      "unit": "ms",
+      "runId": "run-02"
+    },
+    {
+      "id": "metric-57eb19765f",
+      "name": "Long Task",
+      "category": "interaction",
+      "value": 486,
+      "unit": "ms",
+      "runId": "run-02"
+    },
+    {
+      "id": "metric-0456641ac5",
+      "name": "Heap Used",
+      "category": "memory",
+      "value": 148,
+      "unit": "MB",
+      "runId": "run-01"
+    },
+    {
+      "id": "metric-a38f911bdf",
+      "name": "Detached DOM Nodes",
+      "category": "memory",
+      "value": 18,
+      "unit": "count",
+      "runId": "run-01"
+    },
+    {
+      "id": "metric-6318410718",
+      "name": "Heap Used",
+      "category": "memory",
+      "value": 148,
+      "unit": "MB",
+      "runId": "run-02"
+    },
+    {
+      "id": "metric-67f1c82cd6",
+      "name": "Detached DOM Nodes",
+      "category": "memory",
+      "value": 18,
+      "unit": "count",
+      "runId": "run-02"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence-e54ba4d4a1",
+      "runId": "run-01",
+      "category": "interaction",
+      "severity": "high",
+      "source": "trace",
+      "summary": "交互后出现 486ms Long Task，说明主线程存在明显阻塞。",
+      "value": 486,
+      "thresholdRef": "Long Task >= 200ms",
+      "artifactRefs": [
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-interaction-trace.json"
+      ],
+      "timestamp": "2026-09-05T17:14:34.028Z"
+    },
+    {
+      "id": "evidence-b6ac7ef4c4",
+      "runId": "run-01",
+      "category": "interaction",
+      "severity": "medium",
+      "source": "derived",
+      "summary": "脚本执行耗时 321ms，说明同步 JavaScript 很可能是阻塞来源。",
+      "value": 321,
+      "thresholdRef": "Script time >= 150ms",
+      "artifactRefs": [
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-interaction-trace.json"
+      ],
+      "timestamp": "2026-09-05T17:14:34.028Z"
+    },
+    {
+      "id": "evidence-57eb19765f",
+      "runId": "run-02",
+      "category": "interaction",
+      "severity": "high",
+      "source": "trace",
+      "summary": "交互后出现 486ms Long Task，说明主线程存在明显阻塞。",
+      "value": 486,
+      "thresholdRef": "Long Task >= 200ms",
+      "artifactRefs": [
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-interaction-trace.json"
+      ],
+      "timestamp": "2026-09-05T17:14:34.028Z"
+    },
+    {
+      "id": "evidence-daeeeefdc7",
+      "runId": "run-02",
+      "category": "interaction",
+      "severity": "medium",
+      "source": "derived",
+      "summary": "脚本执行耗时 321ms，说明同步 JavaScript 很可能是阻塞来源。",
+      "value": 321,
+      "thresholdRef": "Script time >= 150ms",
+      "artifactRefs": [
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-interaction-trace.json"
+      ],
+      "timestamp": "2026-09-05T17:14:34.028Z"
+    },
+    {
+      "id": "evidence-09a806fad6",
+      "runId": "run-01",
+      "category": "memory",
+      "severity": "medium",
+      "source": "heap",
+      "summary": "Heap 使用量达到 148MB，存在持续增长风险。",
+      "value": 148,
+      "thresholdRef": "Heap Used >= 140MB",
+      "artifactRefs": [
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-memory-heap.json"
+      ],
+      "timestamp": "2026-09-05T17:14:34.028Z"
+    },
+    {
+      "id": "evidence-a38f911bdf",
+      "runId": "run-01",
+      "category": "memory",
+      "severity": "medium",
+      "source": "heap",
+      "summary": "Detached DOM 节点数达到 18，存在未释放节点风险。",
+      "value": 18,
+      "thresholdRef": "Detached DOM >= 10",
+      "artifactRefs": [
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-memory-heap.json"
+      ],
+      "timestamp": "2026-09-05T17:14:34.028Z"
+    },
+    {
+      "id": "evidence-51a674f9e0",
+      "runId": "run-02",
+      "category": "memory",
+      "severity": "medium",
+      "source": "heap",
+      "summary": "Heap 使用量达到 148MB，存在持续增长风险。",
+      "value": 148,
+      "thresholdRef": "Heap Used >= 140MB",
+      "artifactRefs": [
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-memory-heap.json"
+      ],
+      "timestamp": "2026-09-05T17:14:34.028Z"
+    },
+    {
+      "id": "evidence-67f1c82cd6",
+      "runId": "run-02",
+      "category": "memory",
+      "severity": "medium",
+      "source": "heap",
+      "summary": "Detached DOM 节点数达到 18，存在未释放节点风险。",
+      "value": 18,
+      "thresholdRef": "Detached DOM >= 10",
+      "artifactRefs": [
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-memory-heap.json"
+      ],
+      "timestamp": "2026-09-05T17:14:34.028Z"
+    }
+  ],
+  "findings": [
+    {
+      "id": "finding-44a4aeebcc",
+      "category": "interaction",
+      "title": "交互卡顿",
+      "summary": "切换会话后主线程出现明显阻塞，交互响应存在卡顿风险。",
+      "level": "Confirmed",
+      "confidence": 0.91,
+      "evidenceIds": [
+        "evidence-e54ba4d4a1",
+        "evidence-b6ac7ef4c4"
+      ],
+      "recommendations": [
+        "优先检查切换会话路径上的同步数据处理逻辑。",
+        "拆分大计算任务，避免在单次交互中集中完成。",
+        "结合 console 提示进一步定位具体阻塞路径。"
+      ]
+    },
+    {
+      "id": "finding-161428ebc9",
+      "category": "interaction",
+      "title": "交互卡顿",
+      "summary": "切换会话后主线程出现明显阻塞，交互响应存在卡顿风险。",
+      "level": "Confirmed",
+      "confidence": 0.91,
+      "evidenceIds": [
+        "evidence-57eb19765f",
+        "evidence-daeeeefdc7"
+      ],
+      "recommendations": [
+        "优先检查切换会话路径上的同步数据处理逻辑。",
+        "拆分大计算任务，避免在单次交互中集中完成。",
+        "结合 console 提示进一步定位具体阻塞路径。"
+      ]
+    },
+    {
+      "id": "finding-a7cd460d35",
+      "category": "memory",
+      "title": "内存持续增长风险",
+      "summary": "多轮操作后堆内存和 Detached DOM 指标偏高，存在疑似泄漏风险。",
+      "level": "Confirmed",
+      "confidence": 0.82,
+      "evidenceIds": [
+        "evidence-09a806fad6",
+        "evidence-a38f911bdf"
+      ],
+      "recommendations": [
+        "检查会话切换后是否有 DOM 节点、缓存或事件监听未被释放。",
+        "重点关注消息列表、会话缓存和闭包持有对象的生命周期。"
+      ]
+    },
+    {
+      "id": "finding-33c4b24331",
+      "category": "memory",
+      "title": "内存持续增长风险",
+      "summary": "多轮操作后堆内存和 Detached DOM 指标偏高，存在疑似泄漏风险。",
+      "level": "Confirmed",
+      "confidence": 0.82,
+      "evidenceIds": [
+        "evidence-51a674f9e0",
+        "evidence-67f1c82cd6"
+      ],
+      "recommendations": [
+        "检查会话切换后是否有 DOM 节点、缓存或事件监听未被释放。",
+        "重点关注消息列表、会话缓存和闭包持有对象的生命周期。"
+      ]
+    }
+  ],
+  "runHistory": [
+    {
+      "runId": "run-01",
+      "startedAt": "2026-09-05T17:14:34.018Z",
+      "status": "SUCCESS",
+      "stepNames": [
+        "click",
+        "wait",
+        "assert",
+        "click",
+        "wait",
+        "assert"
+      ],
+      "artifacts": [
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-interaction-trace.json",
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-interaction-console.json",
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-interaction-screenshot.txt",
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-interaction-heap.json",
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-memory-trace.json",
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-memory-console.json",
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-memory-screenshot.txt",
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-memory-heap.json"
+      ],
+      "issues": [],
+      "endedAt": "2026-09-05T17:14:34.022Z"
+    },
+    {
+      "runId": "run-02",
+      "startedAt": "2026-09-05T17:14:34.022Z",
+      "status": "SUCCESS",
+      "stepNames": [
+        "click",
+        "wait",
+        "assert",
+        "click",
+        "wait",
+        "assert"
+      ],
+      "artifacts": [
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-interaction-trace.json",
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-interaction-console.json",
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-interaction-screenshot.txt",
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-interaction-heap.json",
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-memory-trace.json",
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-memory-console.json",
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-memory-screenshot.txt",
+        "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-memory-heap.json"
+      ],
+      "issues": [],
+      "endedAt": "2026-09-05T17:14:34.025Z"
+    }
+  ]
+}

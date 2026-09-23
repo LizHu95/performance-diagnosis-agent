@@ -1,0 +1,10 @@
+{
+  "collectedAt": "2026-09-05T17:14:34.024Z",
+  "runId": "run-02",
+  "category": "interaction",
+  "inp": 264,
+  "longTaskMs": 486,
+  "mainThreadBusyMs": 540,
+  "scriptMs": 321,
+  "activeConversation": "会话B"
+}

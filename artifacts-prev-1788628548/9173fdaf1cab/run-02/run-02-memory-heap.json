@@ -1,0 +1,11 @@
+{
+  "collectedAt": "2026-09-05T17:14:34.025Z",
+  "runId": "run-02",
+  "category": "memory",
+  "heapUsedMb": 148,
+  "detachedDomNodes": 18,
+  "suspiciousRetainers": [
+    "ChatMessageList",
+    "SessionCache"
+  ]
+}

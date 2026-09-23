@@ -1,0 +1,52 @@
+[
+  {
+    "runId": "run-01",
+    "startedAt": "2026-09-05T17:14:34.018Z",
+    "status": "SUCCESS",
+    "stepNames": [
+      "click",
+      "wait",
+      "assert",
+      "click",
+      "wait",
+      "assert"
+    ],
+    "artifacts": [
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-interaction-trace.json",
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-interaction-console.json",
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-interaction-screenshot.txt",
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-interaction-heap.json",
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-memory-trace.json",
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-memory-console.json",
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-memory-screenshot.txt",
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-01/run-01-memory-heap.json"
+    ],
+    "issues": [],
+    "endedAt": "2026-09-05T17:14:34.022Z"
+  },
+  {
+    "runId": "run-02",
+    "startedAt": "2026-09-05T17:14:34.022Z",
+    "status": "SUCCESS",
+    "stepNames": [
+      "click",
+      "wait",
+      "assert",
+      "click",
+      "wait",
+      "assert"
+    ],
+    "artifacts": [
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-interaction-trace.json",
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-interaction-console.json",
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-interaction-screenshot.txt",
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-interaction-heap.json",
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-memory-trace.json",
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-memory-console.json",
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-memory-screenshot.txt",
+      "/Users/bytedance/Documents/privacy/code/performance-diagnosis/artifacts/9173fdaf1cab/run-02/run-02-memory-heap.json"
+    ],
+    "issues": [],
+    "endedAt": "2026-09-05T17:14:34.025Z"
+  }
+]

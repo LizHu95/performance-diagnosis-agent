@@ -1,0 +1,22 @@
+{
+  "action": "assert",
+  "observation": {
+    "url": "https://example.com/chat",
+    "title": "Mock Chat Page",
+    "visibleTexts": [
+      "新建会话",
+      "会话A",
+      "会话B"
+    ],
+    "availableTargets": [
+      "button:新建会话",
+      "text:会话A",
+      "text:会话B"
+    ]
+  },
+  "state": {
+    "url": "https://example.com/chat",
+    "activeConversation": "会话B",
+    "typedValues": {}
+  }
+}

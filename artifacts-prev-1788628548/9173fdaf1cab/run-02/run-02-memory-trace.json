@@ -1,0 +1,9 @@
+{
+  "collectedAt": "2026-09-05T17:14:34.024Z",
+  "runId": "run-02",
+  "category": "memory",
+  "longTaskMs": 0,
+  "mainThreadBusyMs": 320,
+  "scriptMs": 120,
+  "activeConversation": "会话B"
+}

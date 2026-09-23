@@ -1,0 +1,15 @@
+{
+  "collectedAt": "2026-09-05T17:14:34.021Z",
+  "runId": "run-01",
+  "category": "memory",
+  "messages": [
+    {
+      "level": "warning",
+      "text": "Large synchronous update detected in switchSession"
+    },
+    {
+      "level": "info",
+      "text": "Active conversation: 会话B"
+    }
+  ]
+}
